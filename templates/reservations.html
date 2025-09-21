@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservations - Résidence Kilimandjaro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Réservez votre chambre</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/chambres">Chambres</a></li>
+                <li><a href="/reservations">Réservations</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reservation">
+            <h2>Réservation en ligne</h2>
+            <form action="/confirmation" method="post">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="chambre">Choisissez une chambre</label>
+                <select id="chambre" name="chambre">
+                    <option value="chambre1">Chambre 1</option>
+                    <option value="chambre2">Chambre 2</option>
+                </select>
+
+                <button type="submit">Réserver</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Résidence Kilimandjaro. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

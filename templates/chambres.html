@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Chambres - Résidence Kilimandjaro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Nos Chambres</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/chambres">Chambres</a></li>
+                <li><a href="/reservations">Réservations</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chambres">
+            <h2>Chambres disponibles</h2>
+            <div class="chambre">
+                <img src="{{ url_for('static', filename='chambre1.jpg') }}" alt="Chambre 1">
+                <p>Chambre confortable avec vue sur la mer.</p>
+                <button>Réserver</button>
+            </div>
+            <div class="chambre">
+                <img src="{{ url_for('static', filename='chambre2.jpg') }}" alt="Chambre 2">
+                <p>Chambre spacieuse avec balcon privé.</p>
+                <button>Réserver</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Résidence Kilimandjaro. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
